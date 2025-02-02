@@ -59,7 +59,7 @@ jobs:
           echo "has_update: ${has_update}"
 
       - name: Generate new tag & release
-        if: steps.check_version.outputs.has_update == 'true'
+        if: steps.check_version.outputs.has_update == 'false'
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
