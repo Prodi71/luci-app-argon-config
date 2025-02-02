@@ -71,7 +71,7 @@ jobs:
   job_build_argon:
     name: Build Argon (master)
     needs: job_check
-    if: needs.job_check.outputs.has_update == 'true'
+    if: needs.job_check.outputs.has_update == 'false'
     runs-on: ubuntu-latest
     steps:
       - name: Install packages
